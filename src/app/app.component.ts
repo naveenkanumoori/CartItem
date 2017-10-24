@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DATA } from './shared/mock-data';
+import {Product} from "./shared/product.model";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  // product-thumbnail
+
+  products: Product[]
+
+  constructor() {
+    this.products = DATA
+  }
 }
